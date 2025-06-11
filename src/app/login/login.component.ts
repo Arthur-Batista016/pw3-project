@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AbstractControl, Form, FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-login',
   imports: [ReactiveFormsModule],
@@ -11,7 +12,7 @@ import { AbstractControl, Form, FormBuilder, FormGroup, ReactiveFormsModule, Val
 export class LoginComponent {
 
   user:string = 'tadeu';
-  password:number = 1313;
+  password:string = '1313';
 
 
   form: FormGroup;
@@ -23,8 +24,7 @@ export class LoginComponent {
         passwords: this.fb.group({
           password:['',Validators.required],
           confirmPassword:['',Validators.required]
-        },
-        {validators: this.mesmasenhaValidator})
+        },{validators:this.mesmasenhaValidator})
       });
   }
 
@@ -49,10 +49,16 @@ export class LoginComponent {
 
   }
 
+   verifyLogin:ValidatorFn = (formGroup:AbstractControl):ValidationErrors | null =>{
+     let username = this.form.get('username')?.value
+     let pass = this.form.get('passwords')?.get("password")?.value
+     let confirm = this.form.get('passwords')?.get("confirmPassword")?.value
+     
+     if(this.user!=username || this.password != pass || confirm != this.password){
+       return {loginFailed:true}
+     }
+
+     return null
+
+  }
 }
-// verifyLogin:ValidatorFn = (FormGroup:AbstractControl):ValidationErrors | null =>{
-  //   let username = this.form.get('username')?.value
-  //   let pass = this.form.get('passwords')?.get("password")?.value
-  //   if(this.user!=username && this.password != pass){
-  //     return {loginFailed:true}
-  //   }

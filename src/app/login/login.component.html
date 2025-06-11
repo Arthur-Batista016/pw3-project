@@ -1,6 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="cadastrar()">
 
-<label>USUARIO:
+<label>Usuário:
 <input type="text" formControlName="username">
 </label>
 
@@ -14,7 +14,7 @@
 
 <div formGroupName="passwords">
 <label>Senha:
-  <input type="text" formControlName="password">
+  <input type="password" formControlName="password">
   </label>
 
   @if(form.get('passwords')?.get('password')?.touched && form.get('passwords')?.get('password')?.invalid){
@@ -28,7 +28,7 @@
 
 
 <label>Confirmar Senha:
-  <input type="text" formControlName="confirmPassword">
+  <input type="password" formControlName="confirmPassword">
 </label>
 
   @if(form.get('passwords')?.get('confirmPassword')?.touched && form.get('passwords')?.get('confirmPassword')?.invalid){
@@ -43,13 +43,16 @@
     <div><small>As senhas inseridas são incompatíveis.</small></div>
   }
 
+  @if(form.get('username')?.errors?.['loginFailed'] && form.get('passwords')?.errors?.['loginFailed'] )
+  {
+    <div><small>Credenciais incorretas</small></div>
+  }
 
 
 
 
 </div>    <!--FIM DIV PASSWORDS-->
 
-<button type ="cadastrar">Realizar Login</button>
-
+<button type = "submit" routerLink="/home">Realizar Login</button>
 
 </form>
