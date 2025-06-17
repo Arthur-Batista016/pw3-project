@@ -1,0 +1,40 @@
+#header{
+    display: flex;
+}
+
+#logo{
+    height: 70px;
+}
+
+#searchBar{
+    height: 20px;
+    margin-top: 20px;
+}
+
+#filtros{
+    display: flex;
+}
+
+#buttons{
+    height: 10px;
+}
+
+#user_b{
+    height: 60px;
+    background-color: #AE92BD
+}
+
+#user{
+    height: 50px
+}
+
+
+#home{
+    height: 50px;
+    background-color: #AE92BD;
+}
+
+#Evento{
+    background-color: #4F1271 ;
+    width: 300px;
+}
