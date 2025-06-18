@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-suporte',
@@ -8,8 +9,14 @@ import { Component } from '@angular/core';
 })
 export class SuporteComponent {
 
+  /**
+   *
+   */
+  constructor(private router:Router) {}
+
   enviar(){
-    alert("Mensagem enviada com Sucesso!");
+    alert("Mensagem enviada com Sucesso! Voltando a Página Inicial!");
+    this.router.navigate(['/home'])
     
   }
 }

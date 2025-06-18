@@ -13,6 +13,8 @@
 #searchBar{
     height: 20px;
     margin-top: 20px;
+    margin-left: 20px;
+    width: 200px;
 }
 
 #create{
@@ -25,30 +27,138 @@
 
 #filtros{
     display: flex;
+   
+}
+
+#filtros button{
+     border-radius: 10px;
+     background-color: #783F8E;
+     color: #e7e7e7;
 }
 
 #buttons{
     height: 10px;
+    margin-top: 100px;
 }
 
 #user_b{
-    height: 60px;
-    background-color: #AE92BD
+    height: 55px;
+    background-color: #AE92BD;
+    border-radius: 50px;
+    margin-left: 70px;
 }
 
 #user{
-    height: 50px
+    height: 45px
 }
 
 
 #home{
-    height: 50px;
+    height: 60px;
     background-color: #AE92BD;
+    border-radius: 50px;
+    margin-left: 80px;
+}
+
+#homeI{
+    height: 40px;
+}
+
+#proximo{
+    margin-top: 80px;
+    margin-left: 90px;
 }
 
 #Evento{
     background-color: #4F1271 ;
-    width: 300px;
+    width: 350px;
+    height: 150px;
+    margin-top: 30px;
+    margin-left: 50px;
     border-radius: 20px;
-    display: flex;
+    display: grid;
+}
+
+#Evento h1,p{
+    margin-left: 120px;
+
+}
+
+#Evento h1{
+    margin-top: -140px;
+    font-size: 20px;
+    color: #e7e7e7;
+    
+}
+
+#tipo{
+    margin-top: -80px;
+    color: #e7e7e7;
+}
+
+#data{
+    margin-top: -60px;
+    color: #e7e7e7;
+}
+
+#procura{
+    margin-top: -40px;
+    color: #e7e7e7;
+    border: #AE92BD;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+
+#Evento img{
+    margin-top: 0px;
+    height: 150px;
+}
+
+
+#combine{
+
+    margin-top: 60px;
+    margin-bottom: -10px;
+
+}
+
+#Musico{
+    background-color: #4F1271 ;
+    width: 350px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 50px;
+    border-radius: 20px;
+    display: grid;
+}
+
+
+
+#foto2{
+    background-color: #AE92BD;
+    margin-top: 15px;
+    margin-left: 20px;
+    height: 70px;
+    border-radius: 40px;
+  
+}
+
+#nome{
+  margin-left: 120px ;
+  margin-top: -65px;
+  color: #e7e7e7;
+}
+
+#nota{
+    margin-left: 300px;
+    margin-top: -70px;
+    color: gray;
+}
+
+#bio{
+    margin-top: -40px;
+    margin-left: 120px;
+    width: 200px;
+    color: #e7e7e7;
 }

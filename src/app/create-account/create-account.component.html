@@ -1,30 +1,59 @@
-<h1>CRIE SUA CONTA</h1>
-<input type="radio" value="Músico" value="1" checked>
-<label for="Músico">Músico</label>
+<form [formGroup]="form" (ngSubmit)="cadastrar(formGroup)">
 
-<br>
-<br>
-<label>Usuário:
-<input type="text" formControlName="username" >
+<h1>CRIE SUA CONTA !</h1>
+
+
+
+<label>USUARIO:
+<input type="text" formControlName="username">
 </label>
 
+@if(form.get('username')?.touched && form.get('username')?.invalid){
+  <div>
+  @if(form.get('username')?.errors?.['required']){
+    <small>Usuario é obrigatorio !</small>
+  }
+  </div>
+}
 
 <div formGroupName="passwords">
 <label>Senha:
   <input type="text" formControlName="password">
   </label>
 
-  
+  @if(form.get('passwords')?.get('password')?.touched && form.get('passwords')?.get('password')?.invalid){
+    <div>
+      @if(form.get('passwords')?.get('password')?.errors?.['required']){
+        <small>Senha é obrigatoria !</small>
+      }
+    </div>
+  }
+
 
 
 <label>Confirmar Senha:
   <input type="text" formControlName="confirmPassword">
 </label>
 
-</div> 
+  @if(form.get('passwords')?.get('confirmPassword')?.touched && form.get('passwords')?.get('confirmPassword')?.invalid){
+    <div>
+      @if(form.get('passwords')?.get('confirmPassword')?.errors?.['required']){
+      <small>Confirme sua Senha !</small>
+      }
+  </div>
+  }
+
+  @if(form.get('passwords')?.errors?.['senhasdiferentes'] && form.get('passwords')?.touched){
+    <div><small>As senhas inseridas são incompatíveis.</small></div>
+  }
 
 
 
 
 
-<button>Cadastrar-se</button>
+</div>    <!--FIM DIV PASSWORDS-->
+
+<button type ="cadastrar">Realizar Login</button>
+
+
+</form>
