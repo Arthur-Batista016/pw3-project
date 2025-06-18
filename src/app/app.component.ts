@@ -2,10 +2,14 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from "./login/login.component";
 import { HomePageComponent } from './home-page/home-page.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { ContatoComponent } from './contato/contato.component';
+import { SuporteComponent } from './suporte/suporte.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, LoginComponent, HomePageComponent],
+  imports: [RouterOutlet, LoginComponent, HomePageComponent, SobreComponent, CreateAccountComponent, ContatoComponent, SuporteComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

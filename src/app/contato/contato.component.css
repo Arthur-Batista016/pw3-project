@@ -1,0 +1,36 @@
+#contato{
+   background-color: #4F1271;
+   background-size: cover;
+   min-height: 50vh;
+ /* "100% da altura da viewport (tela)" */
+  margin: 0;
+  padding: 0;
+  
+}
+
+#logo{
+    margin-top: 00px;
+    height: 350px;
+    margin-left: 100PX;
+}
+
+#redes{
+    margin-top: 10px;
+}
+
+#redes img{
+    height: 40px;
+    display: flex;
+    margin-left: 1000px;
+}
+#redes h3{
+    margin-left: 980px;
+    margin-top: -260px;
+    color: #E7E7E7;
+}
+
+#suporte{
+     color: #E7E7E7;
+    margin-top: -120px;
+    margin-left: 500px;
+}

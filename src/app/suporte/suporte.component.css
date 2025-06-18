@@ -1,0 +1,14 @@
+#duvida{
+    margin-left: 500px;
+    margin-top: 100px;
+}
+
+#duvida input{
+    width: 600px;
+}
+
+#duvida button{
+    margin-left: 200px;
+    margin-top: 30px;
+    
+}

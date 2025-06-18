@@ -1,3 +1,7 @@
+#homePage{
+    margin-left: 600px;
+}
+
 #header{
     display: flex;
 }
@@ -9,6 +13,14 @@
 #searchBar{
     height: 20px;
     margin-top: 20px;
+}
+
+#create{
+    width: 100px;
+    height: 50px;
+    margin-top: 10PX;
+    margin-left: 30px;
+    font-size: 13px;
 }
 
 #filtros{
@@ -37,4 +49,6 @@
 #Evento{
     background-color: #4F1271 ;
     width: 300px;
+    border-radius: 20px;
+    display: flex;
 }

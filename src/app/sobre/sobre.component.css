@@ -1,0 +1,28 @@
+body{
+    background-color: gray;
+}
+
+#sobre{
+    text-align: center;
+    margin-top: 300px;
+}
+
+#logo{
+    height: 200px;
+    margin-left: 650px;
+
+}
+
+#txt1{
+    text-align: center;
+}
+
+#txt2{
+    text-align: center;
+    
+}
+
+#icone{
+    height: 50px;
+    margin-top: 10px;
+}
