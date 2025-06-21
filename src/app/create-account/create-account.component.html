@@ -1,12 +1,16 @@
-<form [formGroup]="form" (ngSubmit)="cadastrar(formGroup)">
+<form [formGroup]="form" (ngSubmit)="cadastrar()">
 
 <h1>CRIE SUA CONTA !</h1>
 
-
+<input type="radio" value="Músico"> Músico
+<br>
+<br>
 
 <label>USUARIO:
 <input type="text" formControlName="username">
 </label>
+
+
 
 @if(form.get('username')?.touched && form.get('username')?.invalid){
   <div>
@@ -53,7 +57,7 @@
 
 </div>    <!--FIM DIV PASSWORDS-->
 
-<button type ="cadastrar">Realizar Login</button>
+<button type ="submit">Realizar Login</button>
 
 
 </form>

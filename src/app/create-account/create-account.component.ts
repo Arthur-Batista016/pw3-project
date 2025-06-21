@@ -38,7 +38,7 @@ export class CreateAccountComponent {
   
   cadastrar(){
     if(this.form.valid){
-      alert("Login Efetuado com sucesso!")
+      alert("Usuario cadastrado com sucesso!")
       this.router.navigate(['/home'])
     }else{
       alert("Login Falhou !")

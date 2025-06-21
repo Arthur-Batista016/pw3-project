@@ -5,6 +5,7 @@ import { SuporteComponent } from './suporte/suporte.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ContatoComponent } from './contato/contato.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export const routes: Routes = [
     {path: '', component: LoginComponent, title: "login" },
@@ -14,5 +15,6 @@ export const routes: Routes = [
       { path: 'contato', component: ContatoComponent }
     ]},
     {path: 'suporte', component:SuporteComponent },
-    {path: 'createAccount', component:CreateAccountComponent}
+    {path: 'createAccount', component:CreateAccountComponent},
+     {path: 'profile', component:ProfileComponent}
 ];

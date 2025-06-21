@@ -6,10 +6,11 @@ import { SobreComponent } from './sobre/sobre.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { ContatoComponent } from './contato/contato.component';
 import { SuporteComponent } from './suporte/suporte.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, LoginComponent, HomePageComponent, SobreComponent, CreateAccountComponent, ContatoComponent, SuporteComponent ],
+  imports: [RouterOutlet, LoginComponent, HomePageComponent, SobreComponent, CreateAccountComponent, ContatoComponent, SuporteComponent, ProfileComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

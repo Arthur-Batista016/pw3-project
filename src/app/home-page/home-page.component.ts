@@ -15,4 +15,8 @@ export class HomePageComponent {
     this.router.navigate(['/createAccount'])
   }
 
+  profile(){
+    this.router.navigate(['/profile'])
+  }
+
 }
