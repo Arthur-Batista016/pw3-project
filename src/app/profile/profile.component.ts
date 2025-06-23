@@ -44,7 +44,7 @@ export class ProfileComponent {
 
   confirmDelete(){
     alert("Conta Excluida!")
-    this.router.navigate(["/createAccount"])
+    this.router.navigate(["/"])
   }
 
   aparecerInput(){

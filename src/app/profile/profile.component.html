@@ -19,12 +19,13 @@
       <button (click)="voltar()">Voltar a Home</button>
       <br>
       <br>
-
+      <h3  [hidden]="aparecer" >Alterar Usuario</h3>
       <input type="text"  [hidden]="aparecer" formControlName="username">
       <br>
       <button (click)="alterarPerfil(form)" [hidden]="aparecer">Confirmar</button>
       <br>
       <br>
+      <h3  [hidden]="aparecer2">Alterar Senha</h3>
       <input type="text" [hidden]="aparecer2"  formControlName="password" >
       <br>
       <button [hidden]="aparecer2" (click)="alterarSenha(form)">Confirmar</button>
