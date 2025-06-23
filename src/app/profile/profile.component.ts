@@ -15,18 +15,37 @@ export class ProfileComponent {
   constructor(private fb:FormBuilder, private router:Router) {
       this.form = this.fb.group({
         username:['',Validators.required],
-        password:['',Validators.required]       
+        password:['',Validators.required]
       });
   }
 
-  
+
 
   user:string = "Tadeu"
   senha:string = "1313"
 
-  
+
   aparecer:boolean = true
   aparecer2:boolean = true
+  delete:boolean = false
+  confirmar:boolean = true
+
+
+
+  excluir(){
+    this.delete = true
+    this.confirmar = false
+  }
+
+  falseDelete(){
+    this.delete = false
+    this.confirmar = true
+  }
+
+  confirmDelete(){
+    alert("Conta Excluida!")
+    this.router.navigate(["/createAccount"])
+  }
 
   aparecerInput(){
     this.aparecer = false

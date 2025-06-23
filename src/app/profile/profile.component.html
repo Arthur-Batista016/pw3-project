@@ -1,26 +1,36 @@
 <form [formGroup]="form">
-<h1>LOGADO COMO:</h1>
+  <div [hidden]="confirmar">
+    <h1>TEM CERTEZA?</h1>
+    <button (click)="confirmDelete()">SIM</button>
+    <button (click)="falseDelete()">NÃO</button>
+    </div>
+    <div [hidden]="delete">
+      <h1>LOGADO COMO:</h1>
 
-<h3>USUARIO: {{user}}</h3>
-<button (click)="aparecerInput()">Editar Nome</button>
+      <h3>USUARIO: {{user}}</h3>
+      <button (click)="aparecerInput()">Editar Nome</button>
 
-<h3>Senha: {{senha}}</h3>
-<button (click)="aparecerInput2()">Editar Senha</button>
+      <h3>Senha: {{senha}}</h3>
+      <button (click)="aparecerInput2()">Editar Senha</button>
 
-<h3>Tipo: Músico</h3>
-<br>
-<br>
-<button (click)="voltar()">Voltar a Home</button>
-<br>
-<br>
+      <h3>Tipo: Músico</h3>
+      <br>
+      <br>
+      <button (click)="voltar()">Voltar a Home</button>
+      <br>
+      <br>
 
-<input type="text"  [hidden]="aparecer" formControlName="username">
-<br>
-<button (click)="alterarPerfil(form)" [hidden]="aparecer">Confirmar</button>
-<br>
-<br>
-<input type="text" [hidden]="aparecer2"  formControlName="password" >
-<br>
-<button [hidden]="aparecer2" (click)="alterarSenha(form)">Confirmar</button>
-
+      <input type="text"  [hidden]="aparecer" formControlName="username">
+      <br>
+      <button (click)="alterarPerfil(form)" [hidden]="aparecer">Confirmar</button>
+      <br>
+      <br>
+      <input type="text" [hidden]="aparecer2"  formControlName="password" >
+      <br>
+      <button [hidden]="aparecer2" (click)="alterarSenha(form)">Confirmar</button>
+      <br>
+      <br>
+      <br>
+      <button (click)="excluir()">EXCLUIR CONTA</button>
+  </div>
 </form>
