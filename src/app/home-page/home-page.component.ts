@@ -13,8 +13,8 @@ export class HomePageComponent {
 
   constructor(private router:Router) {}
 
-  criarConta(){
-    this.router.navigate(['/createAccount'])
+  alterarConta(){
+    this.router.navigate(['/'])
   }
 
   profile(){

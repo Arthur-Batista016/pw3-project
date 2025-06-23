@@ -1,5 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="cadastrar()">
 
+  <h1>ENTRE NA SUA CONTA</h1>
 
 <input type="radio" value="Músico"> Músico
 <br>
@@ -55,6 +56,11 @@
 </div>    <!--FIM DIV PASSWORDS-->
 
 <button type ="cadastrar">Realizar Login</button>
+
+
+
+<h3>Não é Cadastrado? Crie uma conta!</h3>
+<button (click)="CriarConta()">Criar Conta</button>
 
 
 </form>

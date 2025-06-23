@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AbstractControl, Form, FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
+import { routes } from '../app.routes';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent {
 
 
   form: FormGroup;
- 
+
 
 
   constructor(private fb:FormBuilder, private router:Router) {
@@ -54,7 +55,13 @@ export class LoginComponent {
 
   }
 
+  CriarConta(){
+    this.router.navigate(['/createAccount'])
+  }
 }
+
+
+
 // verifyLogin:ValidatorFn = (FormGroup:AbstractControl):ValidationErrors | null =>{
   //   let username = this.form.get('username')?.value
   //   let pass = this.form.get('passwords')?.get("password")?.value
